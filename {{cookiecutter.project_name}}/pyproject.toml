@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.version }}"
+description = ""
+authors = ["{{ cookiecutter.author }}"]
+readme = "README.md"
+packages = [{include = "{{ cookiecutter.project_name }}", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aws-lambda-powertools = "^2.42.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+black = "^24.8.0"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+mypy = "^1.11.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
